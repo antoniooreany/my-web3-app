@@ -140,18 +140,60 @@
 //   // }
 // };
 
+// module.exports = {
+//   networks: {
+//     development: {
+//       host: "127.0.0.1",
+//       port: 7545, // Updated port
+//       network_id: "*",
+//     },
+//   },
+//   compilers: {
+//     solc: {
+//       version: "0.8.0",
+//     },
+//   },
+// };
+
+
+// module.exports = {
+//   networks: {
+//     development: {
+//       host: "127.0.0.1",
+//       port: 7545, // Updated port
+//       network_id: "1337", // Match the network id
+//       gas: 50000000, // Call Gas Limit
+//       gasPrice: 2000000000, // Default Gas Price
+//       // Optional: if you want to set a specific block gas limit, you can add it here
+//     },
+//   },
+//   compilers: {
+//     solc: {
+//       version: "0.8.0", // Ensure this matches the Solidity version of your contracts
+//     },
+//   },
+//   // If you're targeting a specific Ethereum hardfork, you can specify it under the settings for the solc compiler
+//   settings: {
+//     evmVersion: "shanghai" // Adjust according to the hardfork you're targeting
+//   }
+// };
+
 module.exports = {
   networks: {
     development: {
       host: "127.0.0.1",
-      port: 8545,
-      network_id: "*",
+      port: 7545,
+      network_id: "*", // Use "*" for matching any network id
+      // gas: 50000000, // Call Gas Limit
+      // gasPrice: 2000000000, // Default Gas Price
     },
   },
   compilers: {
     solc: {
-      version: "0.8.0",
+      version: "0.8.0", // Ensure this matches the Solidity version of your contracts
     },
   },
+  settings: {
+    evmVersion: "shanghai" // Adjust according to the hardfork you're targeting
+  }
 };
-
